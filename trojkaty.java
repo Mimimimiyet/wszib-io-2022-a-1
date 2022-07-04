@@ -5,11 +5,20 @@
 class Trojkaty {
     /**
      * Główna funkcja programu.
+     * Funkcja zwraca ile par odcinków trójkąta ma jednakową długość.
      * @param {float} a - Długość pierwszego boku.
      * @param {float} b - Długość drugiego boku.
      * @param {float} c - Długość trzeciego boku.
      */
     public static void jakiTrojkat(float a, float b, float c){
+
+int jednakoweDlugosci = ileJednakowych(a, b, c); // tutaj zliczamy ile jest jednakowych bokow
+                   if (jednakoweDlugosci > 1) {
+                       System.out.println("Trójkąt równoboczny"); 
+                   } else if (jednakoweDlugosci > 0) {
+                       System.out.println("Trójkąt równoramienny");
+                   }
+
          if (a == b && b == c) {
              System.out.println("Trójkąt równoboczny"); 
          }
@@ -22,6 +31,18 @@ class Trojkaty {
 
          // TODO: tutaj trzeba bedzie dopisac inne przypadki
     }
+
+public static int ileJednakowych(float a, float b, float c){
+                   int jednakowe = 0; // tutaj zliczamy ile jest jednakowych bokow
+                   if (a == b) {
+                      jednakowe++;
+                   }
+                   if (b == c) {
+                      jednakowe++;
+                   }
+                   return jednakowe;
+               }
+
     /** Wyświetla ekran pomocy */
     public static void pomoc(){
         System.out.println("Acme INC. (C) 2022");
@@ -42,6 +63,7 @@ class Trojkaty {
                     System.out.println("Długości boków trójkąta muszą być nieujemne!");
                     System.exit(2);
                 }
+		
 
                 jakiTrojkat(a, b, c);
 
