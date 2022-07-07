@@ -5,7 +5,8 @@
 class Trojkaty {
     /**
      * Główna funkcja programu.
-     * Uwspólnienie kodu - zmiany
+     * Uwspólnienie kodu - zmiany. 
+     * Pozdrawiam z rodzinka.
      * Funkcja zwraca ile par odcinków trójkąta ma jednakową długość.
      * @param {float} a - Długość pierwszego boku.
      * @param {float} b - Długość drugiego boku.
